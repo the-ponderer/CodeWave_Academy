@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Frontend Track — CodeWave Academy</title>
+  <meta name="description" content="Frontend track: SCSS, animations, responsive layouts, simple JS." />
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header__inner">
+    <a class="logo" href="index.html">CodeWave</a>
+
+    <nav class="nav" id="site-nav">
+        <a class="nav__link" href="tracks.html">Tracks</a>
+        <a class="nav__link" href="vibe.html">Vibe</a>
+        <a class="nav__link" href="contacts.html">Contacts</a>
+        <a class="footer__link" href="about.html">About</a>
+    </nav>
+
+    <button class="burger" type="button" aria-label="Open menu"
+      aria-expanded="false" aria-controls="site-nav" id="burger">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main class="page">
+  <section class="page-hero page-hero--track">
+    <div class="container">
+      <p class="page-hero__kicker">Track</p>
+      <h1 class="page-hero__title">Frontend</h1>
+      <p class="page-hero__lead">
+        Build modern UI: SCSS, animations, responsive layouts, and simple JS.
+      </p>
+
+      <div class="page-hero__meta">
+        <span class="tag">Level 1–3</span>
+        <span class="tag tag--muted">Content website</span>
+      </div>
+
+      <div class="page-hero__actions">
+        <a class="btn btn--primary" href="contacts.html">Join / Contact</a>
+        <a class="btn btn--ghost" href="tracks.html">All tracks</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">What you’ll build</h2>
+
+      <div class="cards-grid cards-grid--2">
+        <article class="card">
+          <h3 class="card__title">Landing + sections</h3>
+          <p class="card__text">Hero, cards, CTA, responsive behavior.</p>
+        </article>
+        <article class="card">
+          <h3 class="card__title">UI components</h3>
+          <p class="card__text">Buttons, badges, glass panels, hover states.</p>
+        </article>
+        <article class="card">
+          <h3 class="card__title">Animations</h3>
+          <p class="card__text">Keyframes, transitions, subtle motion.</p>
+        </article>
+        <article class="card">
+          <h3 class="card__title">Simple JS</h3>
+          <p class="card__text">Menu, toggles, small interactions.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Roadmap</h2>
+
+      <ol class="steps">
+        <li class="step">
+          <h3 class="step__title">Level 1</h3>
+          <p class="step__text">Layout basics, semantic HTML, base CSS.</p>
+        </li>
+        <li class="step">
+          <h3 class="step__title">Level 2</h3>
+          <p class="step__text">Components, grids, responsive patterns.</p>
+        </li>
+        <li class="step">
+          <h3 class="step__title">Level 3</h3>
+          <p class="step__text">SCSS structure, mixins, complex animations.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="track-flow">
+  <div class="container">
+    <div class="track-flow__panel">
+      <p class="track-flow__label">
+        This track is part of the CodeWave learning path
+      </p>
+
+      <div class="track-flow__actions">
+        <a href="tracks.html" class="btn btn--ghost">
+          Explore other tracks
+        </a>
+
+        <a href="contacts.html" class="btn btn--primary">
+          Contact / Join
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer__inner">
+    <a class="footer__logo" href="index.html">CodeWave</a>
+
+    <nav class="footer__nav" aria-label="Footer navigation">
+        <a class="nav__link" href="tracks.html">Tracks</a>
+        <a class="nav__link" href="vibe.html">Vibe</a>
+        <a class="nav__link" href="contacts.html">Contacts</a>
+        <a class="footer__link" href="about.html">About</a>
+    </nav>
+
+    <p class="footer__copy">© 2026 CodeWave Academy</p>
+  </div>
+</footer>
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
