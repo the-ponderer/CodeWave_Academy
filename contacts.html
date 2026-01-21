@@ -3,16 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>CodeWave Academy</title>
-  <meta name="description" content="CodeWave Academy — modern frontend and web development learning." />
-
-  <!-- Main CSS (compiled from SCSS) -->
+  <title>Contacts — CodeWave Academy</title>
+  <meta name="description" content="Contact CodeWave Academy — email, phone, location, and a quick message form." />
   <link rel="stylesheet" href="css/main.css" />
 </head>
-<body>
 
-  <!-- ================= Header ================= -->
+<body>
   <header class="site-header">
     <div class="container header__inner">
       <a class="logo" href="index.html">CodeWave</a>
@@ -20,48 +16,179 @@
       <nav class="nav" id="site-nav">
         <a class="nav__link" href="tracks.html">Tracks</a>
         <a class="nav__link" href="vibe.html">Vibe</a>
-        <a class="nav__link" href="contacts.html">Contacts</a>
-        <a class="footer__link" href="about.html">About</a>
+        <a class="footer__link" href="contacts.html">Contacts</a>
+        <a class="nav__link" href="about.html">About</a>
       </nav>
 
-      <button
-        class="burger"
-        type="button"
-        aria-label="Open menu"
-        aria-expanded="false"
-        aria-controls="site-nav"
-        id="burger"
-      >
-        <span></span>
-        <span></span>
-        <span></span>
+      <button class="burger" type="button"
+              aria-label="Open menu"
+              aria-expanded="false"
+              aria-controls="site-nav"
+              id="burger">
+        <span></span><span></span><span></span>
       </button>
     </div>
   </header>
 
-  <!-- ================= Main ================= -->
-  <main>
-    <!--
-      👉 УНИКАЛЬНЫЙ КОНТЕНТ СТРАНИЦЫ ЗДЕСЬ
-      (hero, sections, cards, maps, gallery и т.д.)
-    -->
+  <main class="page">
+    <section class="page-hero">
+      <div class="container">
+        <p class="page-hero__kicker">CodeWave Academy</p>
+        <h1 class="page-hero__title">Contacts</h1>
+        <p class="page-hero__lead">
+          Ask a question, propose a collaboration, or just say hi. We reply within 24–48 hours.
+        </p>
+
+        <div class="page-hero__actions">
+          <a class="btn btn--ghost" href="index.html">Back to home</a>
+
+          <button class="btn btn--primary" type="button"
+                  data-modal-open="map">
+            Open map
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container contacts">
+        <aside class="contacts__info">
+          <h2 class="section-title">Contact details</h2>
+          <p class="section-lead">
+            Choose any channel that’s convenient.
+          </p>
+
+          <ul class="contact-list">
+            <li class="contact-item">
+              <span class="contact-item__label">Email</span>
+              <a class="contact-item__value" href="mailto:hello@codewave.academy">hello@codewave.academy</a>
+            </li>
+
+            <li class="contact-item">
+              <span class="contact-item__label">Phone</span>
+              <a class="contact-item__value" href="tel:+10000000000">+1 (000) 000-00-00</a>
+            </li>
+
+            <li class="contact-item">
+              <span class="contact-item__label">Address</span>
+              <span class="contact-item__value">
+                103 Learning Ave<br />
+                Vancouver, BC, Canada.
+              </span>
+            </li>
+
+            <li class="contact-item">
+              <span class="contact-item__label">Hours</span>
+              <span class="contact-item__value">Mon–Fri · 10:00–18:00</span>
+            </li>
+          </ul>
+
+          <div class="contacts__note">
+            <p class="contacts__note-text">
+              Map opens in a popup to keep the page lightweight (perfect for mobile).
+            </p>
+          </div>
+          <button class="btn btn--primary" type="button"
+            data-modal-open="map"
+            data-map-src="https://www.google.com/maps?q=Vancouver%2C%20BC&output=embed">
+            Open map
+           </button>
+        </aside>
+
+        <section class="section contacts-form" id="form">
+        <div class="container">
+            <h2 class="section-title">Send a message</h2>
+            <p class="section-lead">We’ll get back within 24–48 hours.</p>
+
+            <form class="form" data-contact-form novalidate>
+            <div class="form__grid">
+                <div class="field">
+                <label class="field__label" for="name">Name</label>
+                <input class="field__control" id="name" name="name" type="text" placeholder="Your name" required />
+                <p class="field__error" data-error-for="name"></p>
+                </div>
+
+                <div class="field">
+                <label class="field__label" for="email">Email</label>
+                <input class="field__control" id="email" name="email" type="email" placeholder="you@mail.com" required />
+                <p class="field__error" data-error-for="email"></p>
+                </div>
+
+                <div class="field field--full">
+                <label class="field__label" for="subject">Subject</label>
+                <input class="field__control" id="subject" name="subject" type="text" placeholder="What’s this about?" required />
+                <p class="field__error" data-error-for="subject"></p>
+                </div>
+
+                <div class="field field--full">
+                <label class="field__label" for="message">Message</label>
+                <textarea class="field__control field__control--area" id="message" name="message" rows="6"
+                            placeholder="Tell us what you need…" required></textarea>
+                <p class="field__error" data-error-for="message"></p>
+                </div>
+            </div>
+
+            <div class="form__footer">
+                <button class="btn btn--primary" type="submit" data-submit>
+                Send message
+                </button>
+
+                <p class="form__status" role="status" aria-live="polite" data-form-status></p>
+            </div>
+            </form>
+        </div>
+        </section>
+      </div>
+    </section>
   </main>
 
-  <!-- ================= Footer ================= -->
   <footer class="site-footer">
     <div class="container footer__inner">
       <a class="footer__logo" href="index.html">CodeWave</a>
 
       <nav class="footer__nav" aria-label="Footer navigation">
-        <a class="nav__link" href="tracks.html">Tracks</a>
-        <a class="nav__link" href="vibe.html">Vibe</a>
-        <a class="nav__link" href="contacts.html">Contacts</a>
+        <a class="footer__link" href="tracks.html">Tracks</a>
+        <a class="footer__link" href="vibe.html">Vibe</a>
+        <a class="footer__link" href="contacts.html">Contacts</a>
         <a class="footer__link" href="about.html">About</a>
       </nav>
 
       <p class="footer__copy">© 2026 CodeWave Academy</p>
     </div>
   </footer>
+
+  <!-- Shared modal (reused for map + success message; images already use it on vibe page) -->
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal__overlay" data-modal-close></div>
+
+    <div class="modal__dialog" role="dialog" aria-modal="true" aria-label="Popup">
+      <button class="modal__close" type="button" data-modal-close aria-label="Close">×</button>
+
+      <!-- Image mode (already used on vibe) -->
+      <figure class="modal__figure modal__mode modal__mode--image">
+        <img class="modal__img" src="" alt="" />
+        <figcaption class="modal__cap"></figcaption>
+      </figure>
+
+      <!-- Map mode (we will show this when data-modal-open="map") -->
+      <div class="modal__mode modal__mode--map" hidden>
+        <div class="modal__map">
+          <!-- iframe will be injected by JS so it loads only when opened -->
+        </div>
+      </div>
+
+      <!-- Notice mode (success message for fake form send) -->
+      <div class="modal__mode modal__mode--notice" hidden>
+        <div class="modal__notice">
+          <h3 class="modal__notice-title">Message sent</h3>
+          <p class="modal__notice-text">
+            Thanks! This is a demo flow for portfolio. In the next project we’ll connect serverless delivery.
+          </p>
+          <button class="btn btn--primary" type="button" data-modal-close>Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script type="module" src="js/main.js"></script>
 </body>

@@ -1,0 +1,35 @@
+@use '../variables' as *;
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  padding: 12px 18px;
+  border-radius: 999px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+
+  transition: transform $transition-fast, background $transition-base, border-color $transition-base, color $transition-base;
+  user-select: none;
+
+  &:hover { transform: translateY(-1px); }
+  &:active { transform: translateY(0); }
+}
+
+.btn--primary {
+  background: $color-accent;
+  color: #0b0b0f;
+  box-shadow: $shadow-soft;
+
+  &:hover { background: $color-accent-hover; }
+}
+
+.btn--ghost {
+  border: 1px solid $color-border;
+  background: rgba(255,255,255,0.04);
+  color: $color-text-main;
+
+  &:hover { border-color: rgba(255,255,255,0.2); background: rgba(255,255,255,0.06); }
+}

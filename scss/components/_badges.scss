@@ -1,0 +1,14 @@
+@use '../variables' as *;
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: 999px;
+
+  border: 1px solid $color-border;
+  background: rgba(255,255,255,0.04);
+
+  font-size: 14px;
+  color: $color-text-muted;
+}

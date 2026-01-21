@@ -1,0 +1,120 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+.tracks {
+  padding: 120px 0;
+}
+
+.tracks__grid {
+  margin-top: 48px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.track-card {
+  padding: 28px;
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.track-card:hover {
+  transform: translateY(-6px);
+  background: rgba(255, 255, 255, 0.07);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.35);
+  backdrop-filter: blur(18px);
+
+
+}
+
+.track-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+
+  background: linear-gradient(
+    120deg,
+    rgba(120, 150, 255, 0.18),
+    rgba(90, 200, 255, 0.08),
+    transparent 60%
+  );
+
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  pointer-events: none;
+}
+.track-card:hover::before {
+  opacity: 1;
+}
+
+.track-card__title {
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.track-card__desc {
+  font-size: 15px;
+  color: $color-text-muted;
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+
+.track-card__level {
+  font-size: 13px;
+  color: $color-accent;
+}
+/* Roadmap / steps */
+.steps {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 16px;
+}
+  .track-flow__label{
+    display: flex;
+    margin-bottom: 10px;
+  }
+  
+.step {
+  @include glass(rgba(255,255,255,0.03), rgba(255,255,255,0.10), 14px);
+  @include panel(18px, 16px);
+}
+@include respond(600px) {
+  .track-flow__actions {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    gap: 6px;
+    text-align: center;
+  }
+  .track-flow__label{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .track-flow__actions .btn {
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
+@media (max-width: 900px) {
+  .tracks__grid {
+    grid-template-columns: 1fr;
+  }
+}

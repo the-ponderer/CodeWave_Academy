@@ -1,0 +1,27 @@
+// scss/_mixins.scss
+@use './variables' as *;
+
+
+@mixin respond($max) {
+  @media (max-width: $max) { @content; }
+}
+
+@mixin clampText($maxWidth) {
+  max-width: $maxWidth;
+}
+
+@mixin section-space($pt: 84px, $pb: 96px) {
+  padding: $pt 0 $pb;
+}
+
+@mixin panel($pad: 22px, $radius: 18px) {
+  padding: $pad;
+  border-radius: $radius;
+}
+
+@mixin glass($bg: rgba(255,255,255,0.035), $border: rgba(255,255,255,0.10), $blur: 14px) {
+  background: $bg;
+  border: 1px solid $border;
+  backdrop-filter: blur($blur);
+  -webkit-backdrop-filter: blur($blur);
+}

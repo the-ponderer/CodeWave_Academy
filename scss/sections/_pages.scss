@@ -1,0 +1,167 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+/* ===== Internal pages ===== */
+
+.page {
+  // общий вертикальный ритм страницы
+  padding: 0; // чтобы не дублировать, отступы даём секциям
+}
+
+/* ---- Page hero ---- */
+
+.page-hero {
+  @include section-space(84px, 56px);
+}
+
+.page-hero__kicker {
+  color: rgba(255,255,255,0.70);
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  font-size: 12px;
+  margin: 0 0 10px;
+}
+
+.page-hero__title {
+  font-size: 56px;
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+  margin: 0 0 14px;
+}
+
+.page-hero__lead {
+  color: rgba(255,255,255,0.75);
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 0 0 22px;
+  @include clampText(68ch);
+}
+
+.page-hero__actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 6px;
+}
+
+/* ---- Generic section ---- */
+
+.section {
+  @include section-space(40px, 80px);
+}
+
+.section-title {
+  font-size: 40px;
+  line-height: 1.15;
+  margin: 0 0 18px;
+  letter-spacing: -0.03em;
+}
+.section-actions {
+  display: flex;
+  gap: 14px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+
+@include respond(600px) {
+  .section-actions {
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+.section-title--spaced {
+  margin-top: 64px;
+}
+@include respond(600px) {
+  .section-title--spaced {
+    margin-top: 40px;
+  }
+}
+/* ---- Cards grid ---- */
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.card {
+  @include glass(rgba(255,255,255,0.035), rgba(255,255,255,0.10), 14px);
+  @include panel(22px, 22px);
+  transition: transform .2s ease, background .2s ease, border-color .2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  background: rgba(255,255,255,0.055);
+  border-color: rgba(255,255,255,0.14);
+}
+
+.card__title {
+  font-size: 18px;
+  margin: 0 0 8px;
+}
+
+.card__text {
+  margin: 0 0 12px;
+  color: rgba(255,255,255,0.75);
+  line-height: 1.6;
+  @include clampText(70ch);
+}
+
+.card__meta {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 0 0 12px;
+}
+
+/* ---- Tags ---- */
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  height: 28px;
+  padding: 0 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  color: rgba(255,255,255,0.92);
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.10);
+}
+
+.tag--muted {
+  color: rgba(255,255,255,0.70);
+  background: rgba(255,255,255,0.035);
+}
+
+/* ---- Card link ---- */
+
+.card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255,255,255,0.92);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.card__link:hover {
+  text-decoration: underline;
+}
+
+/* ===== Responsive ===== */
+
+@include respond(900px) {
+  .page-hero__title { font-size: 40px; }
+  .section-title { font-size: 30px; }
+  .cards-grid { grid-template-columns: 1fr; }
+}
+
+@include respond(600px) {
+  .page-hero { padding: 64px 0 44px; }
+  .page-hero__title { font-size: 34px; }
+  .page-hero__lead { font-size: 16px; }
+  .section { padding: 28px 0 64px; }
+}

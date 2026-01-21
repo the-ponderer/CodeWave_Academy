@@ -1,0 +1,66 @@
+/* =========================
+   Colors
+   ========================= */
+
+/* Основные цвета проекта */
+$color-bg-main: #0f0f12;
+$color-bg-secondary: #16161d;
+
+$color-text-main: #f2f2f2;
+$color-text-muted: rgba(255, 255, 255, 0.7);
+
+$color-accent: #5b8cff;      // основной акцент (кнопки, ссылки)
+$color-accent-hover: #7aa0ff;
+
+/* Дополнительные */
+$color-border: rgba(255, 255, 255, 0.1);
+$color-overlay: rgba(0, 0, 0, 0.4);
+
+
+/* =========================
+   Typography
+   ========================= */
+
+$font-main: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+
+/* Размеры шрифтов */
+$font-size-base: 16px;
+$font-size-sm: 14px;
+$font-size-lg: 20px;
+$font-size-xl: 32px;
+$font-size-xxl: 48px;
+
+/* Высоты строк */
+$line-height-base: 1.5;
+$line-height-tight: 1.2;
+
+
+/* =========================
+   Layout
+   ========================= */
+
+$container-width: 1200px;
+$container-padding: 20px;
+
+$section-padding-y: 72px;
+
+
+/* =========================
+   Radius & Shadows
+   ========================= */
+
+$radius-sm: 6px;
+$radius-md: 12px;
+$radius-lg: 20px;
+
+$shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.3);
+$shadow-strong: 0 20px 60px rgba(0, 0, 0, 0.45);
+
+
+/* =========================
+   Transitions & Animations
+   ========================= */
+
+$transition-fast: 0.15s ease;
+$transition-base: 0.3s ease;
+$transition-slow: 0.5s ease;
